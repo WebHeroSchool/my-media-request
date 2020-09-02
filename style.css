@@ -1,0 +1,12 @@
+@media print (min-width; 320px) {
+    .wrap__title {
+        font_size: 32px;
+    }
+}
+
+@media screen, print {
+    .wrap__title {
+        font-size; 32px;
+    }
+ }
+ 
