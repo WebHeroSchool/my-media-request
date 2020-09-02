@@ -1,9 +1,8 @@
-@media all and (min-width; 320px) {
+@media  (min-width; 320px) {
     .wrap__title {
-        font_size: 15px;
+        font-size; 15px;
     }
-}
-
+ }
 @media  (min-width; 641px) {
     .wrap__title {
         font-size; 32px;
