@@ -70,101 +70,24 @@ only screen and (min-device-pixel-ratio : 1.5) {
 }
 
 .mobile-menu {
-  position: fixed;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 16px;
-  top: 0;
-  background-color: #27ae60;
-  left: 0;
-  right: 1;
-  height: 50px;
-  z-index: 9999999;
+   justify-content: flex-end;
+    background: #008aff;
 }
-.mobile-menu__btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 30px;
-  cursor: pointer;
-  transition: .4s;
+.mobile-menu a {
+  color:#fff;
+   padding:15px 10px;
+    text-decoration:none;
+     text-align:center;
 }
-.mobile-menu__icon {
-  display: block;
-  position: relative;
-  background: red;
-  width: 90%;
-  height: 4px;
-  transition: .4s;
+
+.mobile-menu a:hover { background:#5c8db7; }
+
+@media all and (max-width: 800px) {
+.mobile-menu { justify-content: space-around;}
+ .mobile-menu a{ flex-grow:1;}
 }
-.mobile-menu__icon::after, .mobile-menu__icon::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: blue;
-  width: 100%;
-  height: 4px;
-  transition: .4s;
-}
-.mobile-menu__icon::after {
-  top: 8px;
-}
-.mobile-menu__icon::before {
-  top: -8px;
-}
-.mobile-menu__container {
-  position: fixed;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 50px;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  height: 0;
-  opacity: 1;
-  transition: .5s;
-  overflow: hidden;
-  background-color: #27ae60;
-}
-.mobile-menu__list {
-  transition: .5s;
-  list-style: none;
-  padding-left: 0;
-  margin-top: -50px;
-}
-.mobile-menu__item {
-  font-size: 26px;
-  padding-bottom: 15px;
-}
-.mobile-menu__link {
-  text-decoration: none;
-  color: #fff;
-}
-.mobile-menu__checkbox {
-  display: none;
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__nav {
-  opacity: 1;
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__container {
-  height: 100%;
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon {
-  background: transparent;
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before, .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
-  top: 0;
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+
+@media all and (max-width: 500px) {
+ .mobile-menu { flex-direction: column; }
 }
